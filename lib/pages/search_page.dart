@@ -22,8 +22,7 @@ class SearchPage extends StatelessWidget {
             onChanged: (data) {
               cityName = data;
             },
-            onSubmitted: (data) async
-            {
+            onSubmitted: (data) async {
               BlocProvider.of<WeatherCubit>(context)
                   .getWeather(cityName: cityName!);
               BlocProvider.of<WeatherCubit>(context).cityName = cityName;
